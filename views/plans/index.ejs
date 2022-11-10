@@ -1,0 +1,28 @@
+<% layout("layout/boilerplate.ejs")%>
+<h1 class="text-center py-5 m-0 h1 login-header">Find Your perfect training plan!</h1>
+<div class="container">
+  <div class="mt-1 mb-3 plan-column plansSection">
+      <%for(let p of plans){%>
+          <div class="plan">
+              <div class= "mt-4 plan-card text-light">
+                  <div class="card-body">
+                    <div class="card-headers">
+                      <h3 class="text-center"><%=p.type%></h3>
+                      <h4 class="text-center"><%=p.difficultyLevel%></h4>
+                    </div>
+                    <p class="card-text">Author: <%=p.author.username%></p>
+                    <p class="card-text"><%=p.description%></p>
+                    <a href="/allPlans/<%=p.id%>" class="button-card button-color text-light  button-color text-light card-btn">Read More!</a>
+                  </div>
+                </div>
+          </div>
+      <%}%>
+
+      
+      
+  </div>
+</div>
+
+
+
+

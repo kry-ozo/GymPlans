@@ -1,0 +1,41 @@
+<% layout("layout/boilerplate.ejs")%>
+<div class="container-fluid bg-img">
+    <section class="container landscape-section text-light">
+        <div class="text-light text-landscape">
+            <h2>Be Better & Better</h2>
+            <h2 class="everyday">EVERYDAY</h2>
+            <p>Strength training is a difficult thing for someone who has never dealt with it, with our platform and users creating it, you do not have to worry about whether your plan is right, create an account and see for yourself how many possibilities the GymPlan platform offers you!</p>
+            
+        </div>
+        <div class="get-started">
+            <a href="/userPanel/register" class="   button text-light secondary-button outline"> Get Started</a>
+        </div>
+    </section>
+</div>
+<div id="aboutUs"></div>
+<section class="container about-us-section mt-6">
+    <h2>About us</h2>
+    <p>We started this platform because we were beginners ourselves and we know how difficult it can be for someone to take their first steps in this new world. Thanks to our efforts, over 400,000 users could change their figures, improve their psyche and improve the quality of life.So, are you join the group of 400,000 users who make up our community?</p>
+    <p>Create an account and see our users, plans. Get better day by day with us and our services!</p>
+
+    <div class="row mt-5 form-about">
+        <p class="try">Try us! Register here</p>
+        <div class="col-8 offset-2"> 
+            <form action="/userPanel/register" method="post" class="needs-validation" novalidate>
+                <div class="my-3">
+                    <label for="username">Name</label>
+                    <input type="text" name="username" id="username" class="form-control" required>
+                </div>
+                <div class="my-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="my-3">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"class="form-control" required>
+                </div>
+                <button class="btn  button button-color text-light btn-lg">Sign up</button>
+            </form>
+        </div>
+    </div>
+</section>

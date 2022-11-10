@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top" id="navbar">
+    <div class="container " id="nav-flex">
+      <div  id="firstRow">
+          <a class="navbar-brand text-brand" href="/home" id="navbarBrand">GymPlans</a>
+          <div class="nav-item hamburger centering-ham" id="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </div>
+        </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 trans" id="nav-list">
+            <li class="nav-item centering">
+              <a class="nav-link hover-link" href="/allPlans">Plans</a>
+            </li>
+            <li class="nav-item centering">
+              <a class="nav-link" href="/allPlans/create">Create Plan</a>
+            </li>
+            <li class="nav-item centering">
+              <a class="nav-link" href="#aboutUs">About us</a>
+            </li>
+            
+          </ul>
+          <%if(!currentUser){%>
+              <a class="nav-link me-3  button button-color text-light dis trans" href="/userPanel/register" id="register">Join us!</a>
+              <a class="nav-link    button button-color text-light  dis trans" href="/userPanel/login" id="login">Login</a>
+          <%}else{%>
+            <form action="/logout" method="post" class=" centering" id="logoutForm">
+              <button class="btn  button  btn-danger nav-item dis" id="logout">Logout</button>
+            </form>
+            <div class="nav-item centering ps-1" id="profileDiv">
+              <a class="nav-link button button-color text-light dis trans" href="/userPanel/profile" id="profile">Your Profile</a>
+            </div>
+          <%}%>
+        </div>
+      </div>
+    </div>
+  </nav>

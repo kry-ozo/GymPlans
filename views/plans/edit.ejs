@@ -1,0 +1,53 @@
+<% layout("layout/boilerplate.ejs")%>
+<h1 class="text-center py-4  h1 create-header mb-3">Add your own plan!</h1>
+<div class="form-plan-section">
+    <form action="/allPlans/<%=plan._id%>" method="post" class="container my-4 needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Plan Title:</label>
+            <input type="text"class="form-control" id="exampleFormControlTextarea1" name="planName" value="<%=plan.planName%>" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" required maxlength="170"><%=plan.description%></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Set gender of your plan:</label>
+            <select name="gender" id="gender" class="form-select" required>
+                <option value=""></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="days" class="form-label">Set days of your plan:</label>
+            <select name="days" id="days" class="form-select" required>
+                <option value=""></option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div class="mb-3">
+        <label for="type" class="form-label">Set type of your plan:</label>
+            <select name="type" id="type" class="form-select" required>
+                <option value=""></option>
+                <option value="Push-Pull">Push-Pull</option>
+                <option value="Split">Split</option>
+                <option value="Push-Pull-Legs">Push-Pull-Legs</option>
+                <option value="Upper-Down">Upper-Down</option>
+                <option value="Full-Body-Workout">Full-Body-Workout</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="difficulty" class="form-label">Set difficulty of your plan:</label>
+            <select name="difficultyLevel" id="difficulty" class="form-select" required>
+                <option value=""></option>
+                <option value="Beginner">Beginner</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Professional">Professional</option>
+            </select>
+        </div>
+        <button class="button button-color text-light">Update</button>
+    </form>
+</div>
